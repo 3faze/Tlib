@@ -15,7 +15,7 @@ functions but apreciated!
 #IMPORTANT: IF YOU ARE GOING TO CHANGE THE CODE, IT ISN'T PROPERLY ORGANIZED BECAUSE
 #OF THE SEQUENCIES! RESSELING IS NOT ALLOWED SINCE THAT TLIB IS REGISTERED!
 
-version = "Tlib.py -- 0.1 -- python 3 -- 2022"
+version = "Tlib.py -- 0.2 -- python 3 -- 2022"
 
 import turtle as t
 import random as rd
@@ -23,11 +23,10 @@ import time as ti
 import sys as sy
 import math as ma
 
+screen_a = False
+
 def p_version():
     print(version + "\n")
-
-#Use the following method for the version to be displayed
-#p_version()
 
 def greet_user_now():
     print("Welcome from the Tlib community! " + "Version: " + version)
@@ -36,20 +35,41 @@ greet_user_now()
 def greet_user(user):
     print("Welcome from the Tlib community, " + user + "!")
 
-#Use the following method to greet the user
-#greet_user("USERNAME")
-
-def funcs(MD):
-    dir(MD)
-
-
-
+def sum3(n_1, n_2, n_3):
+    print("This is the result of your sum!\n" + str(n_1 + n_2 + n_3))
 
 def sum2(n_1, n_2):
     print("This is the result of your sum!\n" + str(n_1 + n_2))
 
-#Use the following method to do the sum of 2 integers/floats
-#sum2(NUMBER, NUMBER)
+def calculator():
+    operation = input("What operation do you want to perform?")
+    print("The result of the operation is:\n", eval(operation))
 
+
+def screen(WIDTH, HEIGHT):
+    screen = t.Screen()
+    screen.setup(WIDTH, HEIGHT)
+    screen_a = True
+    print("Check your new window")
+
+
+def add_screen_object(COLOR, SIZEX, SIZEY, SHAPE):
+    if screen_a == True:
+        ob_1 = t.Turtle()
+        ob_1.color(COLOR)
+        ob_1.shapesize(SIZEX, SIZEY)
+        ob_1.shape(SHAPE)
+        print("Check your new window(If you didin't already had it opened)")
+    elif screen_a == False:
+        screen = t.Screen()
+        screen_a = True
+        wi = input("What should be the Width")
+        hi = input("What should be the Height")
+        screen.setup(int(wi), int(hi))
+        ob_1 = t.Turtle()
+        ob_1.color(COLOR)
+        ob_1.shapesize(SIZEX, SIZEY)
+        ob_1.shape(SHAPE)
+        print("Check your new window")
 
 ```
