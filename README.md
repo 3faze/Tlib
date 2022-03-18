@@ -1,6 +1,4 @@
 ```
-
- 
 #Tlib doesn't concern about this module being integrated in other
 #librarie/programming language!
 
@@ -43,63 +41,25 @@ def sum2(n_1, n_2):
 
 def calculator():
     operation = input("What operation do you want to perform?")
-    print("The result of the operation is:\n", eval(operation))
+    print("The result of the operation is: \n", eval(operation))
 
-
-def screen(WIDTH, HEIGHT):
-    screen = t.Screen()
-    screen.setup(WIDTH, HEIGHT)
-    screen_a = True
-    print("Check your new window")
-
-
-def add_screen_object(COLOR, SIZEX, SIZEY, SHAPE):
-    if screen_a == True:
-        ob_1 = t.Turtle()
-        ob_1.color(COLOR)
-        ob_1.shapesize(SIZEX, SIZEY)
-        ob_1.shape(SHAPE)
-        print("Check your new window(If you didin't already had it opened)")
-    elif screen_a == False:
-        screen = t.Screen()
-        screen_a = True
-        wi = input("What should be the Width")
-        hi = input("What should be the Height")
-        screen.setup(int(wi), int(hi))
-        ob_1 = t.Turtle()
-        ob_1.color(COLOR)
-        ob_1.shapesize(SIZEX, SIZEY)
-        ob_1.shape(SHAPE)
-        print("Check your new window")
-     
 def puts(wtp):
 	print(wtp)
-	
-
-def screen_color(COLOR):
-	if screen_a == True:
-		screen.bgcolor(COLOR)
-	elif screeen_a == False:
-		screen = t.Turtle()
-		screen.bgcolor(COLOR)
-		
-#DO GETS FUNCTION ON PC BUT DONT FORGOT TO CLEAR THIS COMMENT
 
 def wait(NUMBER):
-	ti.sleep(NUMBER)
+    ti.sleep(NUMBER)
 	
 def sleep(NUMBER):
-	ti.sleep(NUMBER)
+    ti.sleep(NUMBER)
 	
 def round(NUMBER):
-	int(float(NUMBER))
-	puts(float(NUMBER))
+    int(float(NUMBER))
+    puts(float(NUMBER))
 	
 def gets(TEXT):
-	inp = input(TEXT)
+    global inp
+    inp = input(TEXT + "\n")
 
-def gresult(OFW):
-	print(OFW)
-	
-
+def getsr(VAR):
+    print(VAR)
 ```
